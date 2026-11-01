@@ -1,39 +1,52 @@
-# Assignment 3 - Terminal Navigation Practice
+ # Assignment 3 – Terminal Navigation Practice Sheet
 
-## Commands Practised
+## Commands for macOS / Linux / Git Bash (Windows PowerShell equivalents)
 
-| Command | Purpose |
-|---|---|
-| `pwd` | Shows the current folder location. |
-| `ls` | Lists files and folders. |
-| `cd ..` | Moves to the parent folder. |
-| `cd foldername` | Opens a folder. |
-| `mkdir Practice` | Creates a new folder. |
-| `New-Item notes.txt` | Creates a new file. |
-| `Set-Content notes.txt "I am learning HTML and CSS."` | Writes text into a file. |
-| `Get-Content notes.txt` | Displays the contents of a file. |
+| # | Task | Command | PowerShell |
+|---|---|---|---|
+| 1 | Show current folder | `pwd` | `pwd` |
+| 2 | List files | `ls` | `ls` |
+| 3 | List with details + hidden files | `ls -la` | `ls -Force` |
+| 4 | Create a folder | `mkdir practice` | `mkdir practice` |
+| 5 | Enter the folder | `cd practice` | `cd practice` |
+| 6 | Create an empty file | `touch index.html` | `ni index.html` |
+| 7 | Create nested folders | `mkdir -p css/images` | `mkdir css/images` |
+| 8 | Go up one level | `cd ..` | `cd ..` |
+| 9 | Go to home directory | `cd ~` | `cd ~` |
+| 10 | Copy a file | `cp index.html backup.html` | `cp index.html backup.html` |
+| 11 | Rename / move a file | `mv backup.html old.html` | `mv backup.html old.html` |
+| 12 | Delete a file | `rm old.html` | `rm old.html` |
+| 13 | Delete a folder | `rm -r css` | `rm -r css` |
+| 14 | Print file contents | `cat index.html` | `cat index.html` |
+| 15 | Clear the screen | `clear` | `cls` |
+| 16 | Open folder in VS Code | `code .` | `code .` |
+
+## Practice Exercise
+
+Starting from your home directory:
+
+1. Create `website/` containing `index.html`, `css/style.css`, and `images/`.
+2. Go into `css`, then return to `website` with `cd ..`.
+3. List everything recursively using `ls -R`.
+4. Rename `index.html` to `home.html`, then rename it back.
+5. Open the folder in VS Code.
+
+## Answers – Commands Used
+
+```bash
+cd ~
+mkdir -p website/css website/images
+touch website/index.html website/css/style.css
+cd website/css
+cd ..
+ls -R
+mv index.html home.html
+mv home.html index.html
+code .
+```
 
 ## Practice Result
 
-I successfully practised terminal navigation commands using PowerShell in Visual Studio Code. I created a folder named Practice and a file named notes.txt. I also wrote text into the file and displayed its contents using PowerShell commands.
+I successfully practised all 16 terminal navigation commands using PowerShell in Visual Studio Code. I also completed the additional website folder exercise, including creating files and folders, navigating between directories, listing files recursively, renaming files, and opening the website folder in VS Code.
 
-**Status:** Completed
-
-## Additional Practice Exercise
-
-I created a website folder in my home directory.
-
-The folder contains:
-- `index.html`
-- `css/style.css`
-- `images/`
-
-I practised:
-- Moving into the css folder using `cd website/css`.
-- Returning to the website folder using `cd ..`.
-- Listing files and folders using `ls -R`.
-- Renaming `index.html` to `home.html` using `mv`.
-- Renaming `home.html` back to `index.html`.
-- Opening the website folder in VS Code using `code .`.
-
-**Status:** Completed successfully.
+**Status: Completed**
